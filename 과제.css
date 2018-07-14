@@ -1,0 +1,46 @@
+nav{
+	background-color: lightblue;
+	width: 100%;
+	height: 70px;
+}
+header{
+	background: url(https://pbs.twimg.com/profile_images/573370429756198912/Rb9U5wX6_400x400.jpeg);
+	width: 100%;
+	height: 600px;
+}
+section{
+	
+	background-color: lightgreen;
+	width: 100%;
+	padding: 10% 0%;
+}
+.picture{
+	display: grid;
+	grid-template-columns: 320px 320px 320px;   /*그리드나누기 */
+	text-align: center;
+	
+}
+footer{
+	background-color: orange;
+	width: 100%;
+	padding: 5% 0%;
+}
+img{
+	width: 200px;
+	height: 200px;
+
+}
+.container{
+	width: 960px;
+	margin: auto;
+}
+.header{
+	
+	line-height: 600px;
+}
+.a1{
+	text-align: right;      /* 이미지나 텍스트정렬 */
+}
+.a2{
+	text-align: center;
+}
