@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WEB-연습</title>
+	<meta charset="utf-8">
+</head>
+<body> 
+	<script>
+		var Links = {
+			setColor:function(color){
+				var alist = document.querySelectorAll('a');
+				var i = 0;
+				while(i<alist.length){
+					alist[i].style.color = color;
+					i = i + 1;
+				      }
+			}
+		}
+		var Body = {
+			setColor: function(color) {
+				document.querySelector('body').style.color = color;
+			},
+			setBackgroundColor:function(color){
+					document.querySelector('body').style.backgroundColor = color;
+			}
+		}
+		
+	
+
+		function nightDay(self){
+			var target = document.querySelector('body');
+			if(self.value === 'night'){
+				Body.setBackgroundColor('black'); 
+				Body.setColor('white');
+				self.value = 'white';
+				Links.setColor('coral');				
+			}
+			else{
+				Body.setBackgroundColor('white'); 
+				Body.setColor('black')
+				self.value = 'night';
+				Links.setColor('powderblue');		
+			 }
+		}
+	</script>
+	
+<h1><a href="web.html" class="saw" style=" text-decoration: none">WEB</a></h1>
+<!--2개의버튼 토글로 구현하기 -->
+<input type="button" value="night" onclick="
+nightDay(this);
+	">
+	<input type="button" value="white" onclick="
+nightDay(this);
+	">
+<ol>
+	<li><a href="1.html" class="saw" style=" text-decoration: none">1페이지</a></li>
+	<li><a href="2.html"class="saw " id="active" style=" text-decoration: none">2page</a></li>
+</ol>
+<h2> 여기페이지는 코드중복제거하고 간단히만든 WEB</h2>
+<p> abcdefghijklmnopqrstuvwxyz 가나다라마바사아자차카타파하 우헤헤헤헿헤헤헿헤헿헿
+javascripte practice</p>
+<p style="color:red; text-decoration: underline"> WEB내용</p>
+<a href="index.html" style="color:black; font-size:30px; text-decoration:none"> back home</a>
+</body>
+</html>

@@ -4,7 +4,7 @@
 	<title>WEB-연습</title>
 	<meta charset="utf-8">
 </head>
-<body> <!-- style부분은 html에서 css를 사용하겟다 명시하는것-->
+<body> <!-- 아래의style부분은 html에서 css를 사용하겟다 명시하는것-->
 	<style>  
 		
 		h2 { 
@@ -23,9 +23,33 @@
 		}
 	</style>
 <h1><a href="web.html" class="saw" style=" text-decoration: none">WEB</a></h1>
+<input type="button" value="black" onclick="
+document.querySelector('body').style.backgroundColor = 'black'; 
+document.querySelector('body').style.color = 'white';
+">
+<input type="button" value="white" onclick="
+document.querySelector('body').style.backgroundColor = 'white'; 
+document.querySelector('body').style.color = 'black';
+">
+
+<!--2개의버튼 토글로 구현하기 -->
+<input id="night_day" type="button" value="night" onclick="
+if(document.querySelector('#night_day').value === 'night'){
+	document.querySelector('body').style.backgroundColor = 'black'; 
+	document.querySelector('body').style.color = 'white';
+	document.querySelector('#night_day').value = 'white'
+}else{
+	document.querySelector('body').style.backgroundColor = 'white'; 
+	document.querySelector('body').style.color = 'black';
+	document.querySelector('#night_day').value = 'night'
+}
+
+">
+
 <ol>
 	<li><a href="1.html" class="saw" style=" text-decoration: none">1페이지</a></li>
 	<li><a href="2.html"class="saw " id="active" style=" text-decoration: none">2page</a></li>
+	<li><a href="simpleweb.html" class="saw">코드간단히구현한web</a></li>
 </ol>
 <h2> 여기페이지는 WEB</h2>
 <p> abcdefghijklmnopqrstuvwxyz 가나다라마바사아자차카타파하 우헤헤헤헿헤헤헿헤헿헿</p>
